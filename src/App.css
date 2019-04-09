@@ -49,11 +49,12 @@
 }
 .video-list li{
 	margin: 5px auto;
+	cursor: pointer;
 }
 .list-video-player {
 	float: left;
 	max-width: 1920px;
 	max-height: 1024px;
 	box-shadow: 5px 8px rgba(0,0,0,0.4);
-    background:linear-gradient( to right, #CEF6F5, #A9D0F5);
+    background:#ffffff;
 }
