@@ -13,6 +13,8 @@ import {
 } from './types';
 
 var serverUrl = "https://intromlserver.herokuapp.com";
+//forlocal
+// var serverUrl = "";
 
 // Check token & load user
 export const loadUser = () => (dispatch, getState) => {
@@ -43,7 +45,12 @@ export const register = ({ name, email, password }) => dispatch => {
       'Content-Type': 'application/json'
     }
   };
-
+  name = name ? name : "0";
+  email = email ? email : "0";
+  password = password ? password : "0";
+  if(name == "0" || email == "0" || password == "0"){
+    return;
+  }
   // Request body
   const body = JSON.stringify({ name, email, password });
 

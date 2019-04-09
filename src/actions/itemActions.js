@@ -37,6 +37,9 @@ export const addItem = item => (dispatch, getState) => {
 };
 
 export const deleteItem = id => (dispatch, getState) => {
+  if(!id){
+    return;
+  }
   axios
     .delete(serverUrl+'/api/items/'+id, tokenConfig(getState))
     .then(res =>
