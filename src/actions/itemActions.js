@@ -40,6 +40,7 @@ export const deleteItem = id => (dispatch, getState) => {
   if(!id){
     return;
   }
+  try{
   axios
     .delete(serverUrl+'/api/items/'+id, tokenConfig(getState))
     .then(res =>
@@ -48,9 +49,9 @@ export const deleteItem = id => (dispatch, getState) => {
         payload: id
       })
     )
-    .catch(err =>
-      dispatch(returnErrors(err.response.data, err.response.status))
-    );
+  }error(err){
+    console.log("error in delete video",err);
+  }
 };
 
 export const setItemsLoading = () => {
