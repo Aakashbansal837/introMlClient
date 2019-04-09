@@ -1,0 +1,59 @@
+::-webkit-scrollbar { width: 0 !important }
+*{overflow: -moz-scrollbars-none;}
+*{ -ms-overflow-style: none; }
+.remove-btn {
+  margin-right: 0.5rem;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 1000ms ease-in;
+}
+
+.playerDiv {
+	margin-top: 20px;
+    margin-right: 20px;
+    padding: 5px 5px;
+    box-shadow: 5px 8px rgba(0,0,0,0.4);
+    background:linear-gradient( to right, #CEF6F5, #A9D0F5);
+}
+.MDBContainer-css {
+	margin-left: 5px;
+}
+.list-names {
+	float: left;
+	width: 10;
+	height: 20;
+	max-height: 800px;
+	max-width: 400px;
+	overflow: scroll;
+	margin: 0 0;
+	background-color: #39393E;
+}
+.video-list {
+	margin-top: 20px;
+	background-color: #39393E !important;
+}
+.video-list li{
+	margin: 5px auto;
+}
+.list-video-player {
+	float: left;
+	max-width: 1920px;
+	max-height: 1024px;
+	box-shadow: 5px 8px rgba(0,0,0,0.4);
+    background:linear-gradient( to right, #CEF6F5, #A9D0F5);
+}
