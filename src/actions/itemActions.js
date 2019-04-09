@@ -49,7 +49,7 @@ export const deleteItem = id => (dispatch, getState) => {
         payload: id
       })
     )
-  }error(err){
+  }catch(err){
     console.log("error in delete video",err);
   }
 };
