@@ -4,6 +4,8 @@ import { tokenConfig } from './authActions';
 import { returnErrors } from './errorActions';
 
 var serverUrl = "https://intromlserver.herokuapp.com";
+//forlocal
+// var serverUrl = "";
 
 export const getItems = () => dispatch => {
   dispatch(setItemsLoading());
@@ -36,7 +38,7 @@ export const addItem = item => (dispatch, getState) => {
 
 export const deleteItem = id => (dispatch, getState) => {
   axios
-    .delete(serverUrl+`/api/items/${id}`, tokenConfig(getState))
+    .delete(serverUrl+'/api/items/'+id, tokenConfig(getState))
     .then(res =>
       dispatch({
         type: DELETE_ITEM,
